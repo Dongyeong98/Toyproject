@@ -1,4 +1,4 @@
-export const makeDOMwithProperties =(domType, propertyMap) => {
+export const makeDOMWithProperties =(domType, propertyMap) => {
     // domType : div, a, li ...
     // propertyMap : { "className " : "product-card " }
     // Object.keys(propertMap) -> ["className"] 객체안에서 키값만 가져온다.

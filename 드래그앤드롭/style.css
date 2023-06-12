@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    flex: 1;
+    display: flex;
+    list-style: none;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(138, 135, 229);
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    font-size: 50px;
+    color: white;
+}

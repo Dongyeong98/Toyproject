@@ -1,17 +1,17 @@
 import { getProductCard } from "./module/productCard.js";
 
-const sectionDom = document.getElementsByTagName('section')[0];
+const sectionDOM = document.getElementsByTagName('section')[0];
 
 const productCard = getProductCard({
-    "id" : 4,
-    "imgSrc" : "public/assets/삼겹살.jpg",
-    "name" : "구이용 삼겹살 600g (냉장)",
-    "discountPercent" : 5,
-    "price" : 14820,
-    "originalPrice" : 15600
+        "id" : 4,
+        "imgSrc" : "public/assets/삼겹살.jpg",
+        "name" : "구이용 삼겹살 600g (냉장)",
+        "discountPercent" : 5,
+        "price" : 14820,
+        "originalPrice" : 15600
 });
 
-const productCard2 = getProductCard({
+const productCard2 =getProductCard({
     "id" : 5,
     "imgSrc" : "public/assets/머핀.jpg",
     "name" : "[홍대 W마켓] 머핀 (2입)",
@@ -20,5 +20,5 @@ const productCard2 = getProductCard({
     "originalPrice" : 6000
 })
 
-sectionDom.appendChild(productCard);
-sectionDom.appendChild(productCard2);
+sectionDOM.appendChild(productCard);
+sectionDOM.appendChild(productCard2);
