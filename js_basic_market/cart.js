@@ -1,6 +1,8 @@
+import { CART_COOKE_KEY } from "./constants/cart.js";
 import { getCartInfo } from "./module/cartToggleButton.js";
 import { getProductList } from "./module/productList.js";
 import { makeDOMWithProperties } from "./utils/dom.js";
+import { setPayInfo } from "./module/payModule.js";
 
 // 부모 -> section tag
 // 뒤에 있는 요소 -> id : cart-pay-container
@@ -32,5 +34,11 @@ if (cartInfo.length < 1) {
    // B가 A아래의 C앞에 삽입된다.
 }
 
-// 3. section 아래의 cart-pay-container 앞에 삽입하기
+const cratAllDeleteButtonDOM = document.getElementById('remove-all-button');
+cratAllDeleteButtonDOM.onclick = () => {
+    localStorage.removeItem(CART_COOKE_KEY);
+
+    location.reload();
+}
+setPayInfo();
 
