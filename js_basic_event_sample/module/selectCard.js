@@ -113,6 +113,14 @@ export const setSelectButton = () => {
         const cardId = selectedCard.id?.split('-')[1];
         localStorage.setItem(SELECT_RESULT_KEY, cardId);
         setResultContainer();
+
+        const resultSectionDOM = document.getElementById('result-section');
+        const scrollTargetY = resultSectionDOM.offsetTop;
+        window.scroll({
+            top :scrollTargetY,
+            left : 0,
+            behavior: 'smooth'
+        });
     };
 };
 
@@ -135,7 +143,7 @@ const initialize = () => {
     });
 };
 
-const setResultContainer = () => {
+export const setResultContainer = () => {
 
     const selectedId = Number(localStorage.getItem(SELECT_RESULT_KEY));
     
